@@ -15,9 +15,9 @@
   <%= stylesheet_link_tag "/stylesheets/ionicons/css/ionicons.min.css" %>
   <%= stylesheet_link_tag "/stylesheets/simple-line-icons/css/simple-line-icons.css" %>
   <%= stylesheet_link_tag "/stylesheets/bootstrap/dist/css/bootstrap.min.css" %>
+ 
 
-  
-  
+
  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   
@@ -51,6 +51,8 @@
 </head>
   
 <body>
+  
+<%= render 'layouts/navigation' %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

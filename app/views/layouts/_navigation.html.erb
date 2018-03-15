@@ -1,0 +1,85 @@
+<div class="navbar p white m-b-sm" data-pjax>
+              <a data-toggle="collapse" data-target="#navbar" class="navbar-item pull-right hidden-md-up m-a-0 m-l">
+                <i class="ion-android-menu"></i>
+              </a>
+              <!-- brand -->
+              <a href="https://freetactic.com" class="navbar-brand">
+                <!-- <img src="images/freetactic-logoweb.png" alt="freetactic logo"> -->
+                <span class="text-lg text-success" style="font-weight: 600;">Vegista</span>
+              </a>
+              <!-- / brand -->
+
+              <!-- navbar collapse -->
+              <div class="collapse navbar-toggleable-sm pull-right pull-none-xs" id="navbar">
+                <!-- link and dropdown -->
+                <ul class="nav navbar-nav text-info-hover" data-ui-nav>
+                  
+                  <% if (!user_signed_in?) %>
+                  <li class="nav-item">
+                      <span class="nav-link nav-text text-black">
+                      <strong>
+                        <%= link_to 'Signup', new_user_registration_path %>
+                        </strong>
+                      </span>
+                  </li>
+                  <li class="nav-item">
+                      <span class="nav-link nav-text text-black">
+                      <strong>
+                        <%= link_to 'Login', new_user_session_path %>
+                        </strong>
+                      </span>
+                  </li>
+                  <li class="nav-item">
+                      <span class="nav-link nav-text text-black">
+                      <strong>
+                        <%= link_to 'About', new_user_session_path %>
+                        </strong>
+                      </span>
+                  </li>
+                </ul>
+                
+                
+                  <% else %>
+ 
+                  <ul class="nav navbar-nav text-info-hover" data-ui-nav>
+                  <li class="nav-item dropdown active">
+				<a class="nav-link clear" data-toggle="dropdown" aria-expanded="false">
+					<span class="nav-text text-black">
+						<strong>
+							
+								<span class="p-r-sm small">
+									
+									<img alt="." src="http://pbs.twimg.com/profile_images/955454046143381504/8xuwSlGJ.jpg" class="w-24 circle">
+									
+									<!-- <img alt="." src="/static/images/a0.jpg" class="w-32 circle"> -->
+								</span>
+						</strong>
+					</span>
+				</a>
+
+				<div class="dropdown-menu w dropdown-menu-scale pull-right">
+					<div class="dropdown-item"><span><%= link_to 'Recipes', destroy_user_session_path, method: :delete %></span></div>
+          <div class="dropdown-item"><span><%= link_to 'Profile', destroy_user_session_path, method: :delete %></span></div>
+          <div class="dropdown-item"><span><%= link_to 'About', destroy_user_session_path, method: :delete %></span></div>
+
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-item"><span><%= link_to 'Logout', destroy_user_session_path, method: :delete %></span></div>
+				</div>
+			</li>
+                    <li class="nav-item">
+                      <span class="nav-link nav-text text-black">
+                      <strong>
+                        <%= link_to 'Submit', new_user_session_path %>
+                        </strong>
+                      </span>
+                  </li>
+                    
+                        
+                  <% end %>
+                  
+                </ul>
+                <!-- / link and dropdown -->
+              </div>
+              <!-- / navbar collapse -->
+        </div>
+
