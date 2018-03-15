@@ -3,10 +3,10 @@
                 <i class="ion-android-menu"></i>
               </a>
               <!-- brand -->
-              <a href="https://freetactic.com" class="navbar-brand">
+              <div class="navbar-brand">
+								<%= link_to 'Vegista', root_path, class: "text-lg text-success", style: "font-weight: 600;"  %>
                 <!-- <img src="images/freetactic-logoweb.png" alt="freetactic logo"> -->
-                <span class="text-lg text-success" style="font-weight: 600;">Vegista</span>
-              </a>
+              </div>
               <!-- / brand -->
 
               <!-- navbar collapse -->
@@ -59,7 +59,7 @@
 
 				<div class="dropdown-menu w dropdown-menu-scale pull-right">
 					<div class="dropdown-item"><span><%= link_to 'Recipes', destroy_user_session_path, method: :delete %></span></div>
-          <div class="dropdown-item"><span><%= link_to 'Profile', destroy_user_session_path, method: :delete %></span></div>
+          <div class="dropdown-item"><span><%= link_to 'Profile', edit_user_registration_path %></span></div>
           <div class="dropdown-item"><span><%= link_to 'About', destroy_user_session_path, method: :delete %></span></div>
 
 					<div class="dropdown-divider"></div>
