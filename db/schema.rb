@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180316081613) do
+ActiveRecord::Schema.define(version: 20180316100221) do
+
+  create_table "pictures", force: true do |t|
+    t.integer  "recipe_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "pictures", ["recipe_id"], name: "index_pictures_on_recipe_id"
 
   create_table "recipes", force: true do |t|
     t.string   "recipe_name"
