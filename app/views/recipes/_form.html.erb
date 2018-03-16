@@ -5,10 +5,19 @@
     <div class="panel-body">
         <div class="container">
             
-            <%= form_for @recipe do |f| %>
+            <%= form_for @recipe, html: {multipart: true} do |f| %>
             <%= render 'shared/errors' %>
             
-                
+             <div class="row">
+                    <div class="form-group">
+                       <span class="btn btn-default btn-file">
+                          <i class = "fa fa-cloud-upload fa-lg"></i> Upload a picture
+                           <%= file_field_tag "images[]", type: :file, multiple: false %>
+                       </span>
+                    </div>
+                </div>
+          
+          
             <div class="row">
                     <div class="form-group">
                         <label>Recipe name</label>
