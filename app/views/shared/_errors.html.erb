@@ -1,0 +1,11 @@
+<% unless @recipe.errors.empty? %>
+
+<script type="text/javascript">
+  
+  <% @recipe.errors.full_messages.each do |msg| %>
+    toastr.error('<%= msg %>')
+  <% end %>
+</script>
+ 
+       
+ <% end %>
