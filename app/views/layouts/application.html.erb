@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Vegista</title>
+  
+  <%= stylesheet_link_tag    "application", :media => "all" %>
 
   <%= stylesheet_link_tag "/stylesheets/styles/style.css" %>
   <%= stylesheet_link_tag "/stylesheets/styles/app.css" %>
@@ -45,17 +47,19 @@
   <%= javascript_include_tag '/scripts/ui-taburl.js', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '/scripts/app.js', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '/scripts/ajax.js', 'data-turbolinks-track' => true %>
-  
-  
+ 
   <%= csrf_meta_tags %>
+  
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
   
 <body>
   
 <%= render 'layouts/navigation' %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<%= render 'shared/message' %>
+
+
 
 <%= yield %>
  
