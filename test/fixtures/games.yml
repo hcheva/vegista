@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_name: MyString
+  game_description: MyText
+  game_external_link: MyString
+  game_genre: MyString
+  game_platform: MyString
+  user_id: 
+
+two:
+  game_name: MyString
+  game_description: MyText
+  game_external_link: MyString
+  game_genre: MyString
+  game_platform: MyString
+  user_id: 
