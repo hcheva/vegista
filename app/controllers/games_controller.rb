@@ -6,15 +6,15 @@ before_action :authenticate_user!, except: [:show]
   
   
   def index
-    @games = current_user.games
+    @game = current_user.games
   end
   
   def new
-    @games = current_user.games.build
+    @game = current_user.games.build
   end
   
   def create
-    @games = current_user.games.build(game_params)
+    @game = current_user.games.build(game_params)
     if @game.save
       redirect_to @game, notice:"Game posted!"
     else

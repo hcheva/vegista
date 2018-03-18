@@ -1,0 +1,57 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Post a game
+    </div>
+    <div class="panel-body">
+        <div class="container">
+            
+            <%= form_for @game do |f| %>
+            <%= render 'shared/errors' %>
+          
+          
+            <div class="row">
+                    <div class="form-group">
+                        <label>game name</label>
+                        <%= f.text_field :game_name, placeholder: "game name", class: "form-control" %>
+                    </div>
+                </div>
+          
+          <div class="row">
+                    <div class="form-group">
+                        <label>game description</label>
+                        <%= f.text_field :game_description, placeholder: "game description", class: "form-control" %>
+                    </div>
+                </div>
+          
+          <div class="row">
+                    <div class="form-group">
+                        <label>game link</label>
+                        <%= f.text_field :game_external_link, placeholder: "game link", class: "form-control" %>
+                    </div>
+                </div>
+          
+          <div class="row">
+                    <div class="form-group">
+                        <label>game genre</label>
+                        <%= f.select :game_genre, [["Action", "Action"], ["Adventure","Adventure"], ["Casual","Casual"], ["MMO","MMO"], ["Racing","Racing"], ["RPG","RPG"], ["Simulation","Simulation"], ["Sport","Sport"], ["Strategy","Strategy"]], id: "game_genre", prompt:"Select", class:"form-control" %>
+                    </div>
+                </div>
+          
+          <div class="row">
+                    <div class="form-group">
+                        <label>game platform</label>
+                        <%= f.select :game_platform, [["Computer", "Computer"], ["Mobile","Mobile"], ["Browser","Browser"]], id: "game_platform", prompt:"Select", class:"form-control" %>
+                    </div>
+                </div>
+          
+          
+       
+                
+            <div class="actions">
+                      <%= f.submit "Post", class: "btn btn-primary"%>
+            </div>
+            <% end %>
+            
+        </div>
+    </div>
+</div>

@@ -1,8 +1,8 @@
-<% unless @recipe.errors.empty? %>
+<% unless @game.errors.empty? %>
 
 <script type="text/javascript">
   
-  <% @recipe.errors.full_messages.each do |msg| %>
+  <% @game.errors.full_messages.each do |msg| %>
     toastr.error('<%= msg %>')
   <% end %>
 </script>
