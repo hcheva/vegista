@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   belongs_to :user
-  has_many :pictures
+  has_many :photos
   
   validates :game_name, presence: true, length: {maximum: 75}
   validates :game_description, presence: true, length: {maximum: 140}
