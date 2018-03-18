@@ -5,9 +5,31 @@
     <div class="panel-body">
         <div class="container">
             
-            <%= form_for @game do |f| %>
+            <%= form_for @game, html: {multipart: true}  do |f| %>
             <%= render 'shared/errors' %>
           
+          
+          <div class="row">
+ 
+       <div class="col-md-4">
+ 
+           <div class="form-group">
+ 
+                 <span class="btn btn-default btn-file">
+ 
+                 <i class = "fa fa-cloud-upload fa-lg"></i> Upload a picture
+ 
+                 <%= file_field_tag "images[]", type: :file, multiple: false %>
+ 
+                 </span>
+ 
+           </div>
+ 
+       </div>
+ 
+ </div>
+          
+          <div id="photos"><%= render 'photos/list' %></div>
           
             <div class="row">
                     <div class="form-group">
@@ -45,8 +67,7 @@
                 </div>
           
           
-       
-                
+      
             <div class="actions">
                       <%= f.submit "Post", class: "btn btn-primary"%>
             </div>

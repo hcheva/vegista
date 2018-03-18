@@ -1,10 +1,10 @@
-<% if @pictures %>
+<% if @photos %>
  <div class="row"> 
-        <% @pictures.each do |picture| %>
+        <% @photos.each do |photo| %>
              <div class="col-md-2"> 
                   <div class="panel panel-default"> 
                         <div class="panel-heading preview">
-                             <%= image_tag picture.image.url(), style: "width: 100%;" %> 
+                             <%= image_tag photo.image.url(), style: "width: 100%;" %> 
                         </div>
                   </div>
              </div>
