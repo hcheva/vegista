@@ -14,8 +14,11 @@
         <% @games.each do |game| %>
         <div class="row">
           <div class="col-md-2">
-            <%= image_tag game.photo[0].image.url(:thumb) if game.photos.length > 0 %>
+            <%= image_tag game.photos[0].image.url(:thumb) if game.photos.length > 0 %>
           </div>
+          <div class="col-md-7">
+             <h4><%= game.listing_name %></h4>
+          </div>    
           
         </div>
           
