@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="panel-body">
+        
+        <!-- Photo principale de l'annonce -->
+      
+      <div class="row">
+          <div class="col-md-2">
+          </div>
+            <div class="col-md-8">
+              <h1><strong><%= @game.game_name %></strong></h1>
+                <p><%= @game.game_description %></p>
+                <ul class="list-inline">
+                  <li class="list-inline-item text-sm"><%= image_tag avatar_url(@game.user), class:"w-24 circle b-a" %></li>
+                  <li class="list-inline-item text-sm">+ <%= @game.game_genre %></li>
+                  <li class="list-inline-item text-sm">+ <%= @game.game_platform %></li>
+                </ul>
+                
+                <%= image_tag @photos[0].image.url(), class:"img-responsive" if @photos.length >0 %>
+                 <div class="btn-lg deep-purple text-center m-y-md text-white">
+                 <%= link_to 'GET IT', @game.game_external_link, target: "_blank", class: "text-white" %>
+                 </div>
+                 
+            
+              </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
