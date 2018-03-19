@@ -1,0 +1,6 @@
+production:
+  cloud_name: "hq3yvkjpd"
+  api_key: <%= ENV["257245469995554"] %>
+  api_secret: <%= ENV["hrT29ZYjTnnPAh7i_W5-p-7UH2o"] %>
+  enhance_image_tag: true
+  static_image_support: true 

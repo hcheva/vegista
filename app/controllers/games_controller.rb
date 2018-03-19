@@ -6,6 +6,7 @@ before_action :require_same_user, only: [:edit, :update]
 
 def index
     @game = current_user.games
+    @games = Game.all
 end
   
 def new
