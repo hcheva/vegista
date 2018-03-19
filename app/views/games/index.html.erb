@@ -5,20 +5,23 @@
     </ul>
     
   </div>
-  <div class="col-md-9">
+  <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
         My games
       </div>
       <div class="panel-body">
         <% @games.each do |game| %>
-        <div class="row">
+        <div class="row m-y-md">
           <div class="col-md-2">
             <%= image_tag game.photos[0].image.url(:thumb) if game.photos.length > 0 %>
           </div>
-          <div class="col-md-7">
-             <h4><%= game.listing_name %></h4>
-          </div>    
+          <div class="col-md-5">
+            <%= link_to game.game_name, game_path(game) %>
+          </div>
+          <div class="col-md-3">
+            <%= link_to "Update", edit_game_path(game), class: "btn btn-primary" %>
+          </div> 
           
         </div>
           

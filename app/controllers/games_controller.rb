@@ -6,7 +6,7 @@ before_action :require_same_user, only: [:edit, :update]
 
 def index
     @game = current_user.games
-    @games = Game.all
+    @games = Game.all.order("created_at DESC")
 end
   
 def new
