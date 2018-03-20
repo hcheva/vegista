@@ -31,6 +31,14 @@ a:hover {
     top: 0.5rem !important;
 }
 
+.nav > li > a:hover {
+    background-color: #fff !important;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #fff !important;
+}
+
 
 
 

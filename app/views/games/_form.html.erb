@@ -1,17 +1,22 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        Post a game
-    </div>
-    <div class="panel-body">
-        <div class="container">
+<div class="container">
+  
+    <div>
             
             <%= form_for @game, html: {multipart: true}  do |f| %>
             <%= render 'shared/errors' %>
+      
+      
+      <div class="col-md-2"></div>
+      
+      
+      <div class="col-md-8">
+        
+        <div class="text-lg m-b-lg"><strong>Submit a game</strong></div>
           
           
-          <div class="row">
+     <div class="row">
  
-       <div class="col-md-4">
+       <div>
  
            <div class="form-group">
  
@@ -31,48 +36,48 @@
           
           <div id="photos"><%= render 'photos/list' %></div>
           
-            <div class="row">
+            <div class="row m-y-sm">
                     <div class="form-group">
-                        <label>game name</label>
-                        <%= f.text_field :game_name, placeholder: "game name", class: "form-control" %>
+                        <%= f.text_field :game_name, placeholder: "Game name", class: "form-control" %>
                     </div>
                 </div>
           
-          <div class="row">
+          <div class="row m-y-sm">
                     <div class="form-group">
-                        <label>game description</label>
-                        <%= f.text_field :game_description, placeholder: "game description", class: "form-control" %>
+                        <%= f.text_field :game_description, placeholder: "Game description", class: "form-control" %>
                     </div>
                 </div>
           
-          <div class="row">
+          <div class="row m-y-sm">
                     <div class="form-group">
-                        <label>game link</label>
-                        <%= f.text_field :game_external_link, placeholder: "game link", class: "form-control" %>
+                        <%= f.text_field :game_external_link, placeholder: "Game link", class: "form-control" %>
                     </div>
                 </div>
           
-          <div class="row">
+          <div class="row m-y-sm">
                     <div class="form-group">
-                        <label>game genre</label>
+                        <label>Game genre</label>
                         <%= f.select :game_genre, [["Action", "Action"], ["Adventure","Adventure"], ["Casual","Casual"], ["MMO","MMO"], ["Racing","Racing"], ["RPG","RPG"], ["Simulation","Simulation"], ["Sport","Sport"], ["Strategy","Strategy"]], id: "game_genre", prompt:"Select", class:"form-control" %>
                     </div>
                 </div>
           
-          <div class="row">
+          <div class="row m-y-sm">
+            
                     <div class="form-group">
-                        <label>game platform</label>
+                        <label>Game platform</label>
                         <%= f.select :game_platform, [["Computer", "Computer"], ["Mobile","Mobile"], ["Browser","Browser"]], id: "game_platform", prompt:"Select", class:"form-control" %>
                     </div>
+            
                 </div>
           
           
       
-            <div class="actions">
-                      <%= f.submit "Post", class: "btn btn-primary"%>
+            <div class="row">
+                      <%= f.submit "Post", class: "btn btn-lg deep-purple"%>
             </div>
             <% end %>
+        
+        </div>
             
         </div>
     </div>
-</div>
