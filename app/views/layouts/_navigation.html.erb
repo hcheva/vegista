@@ -21,7 +21,7 @@
 									<li class="nav-item">
                       <span class="nav-link nav-text">
                       <strong>
-                        <%= link_to 'About', new_user_session_path, class: "text-black" %>
+												<%= link_to 'About', '/pages/about', class: "text-black" %>
                         </strong>
                       </span>
                   </li>
@@ -57,7 +57,7 @@
 				<div class="dropdown-menu w dropdown-menu-scale pull-right">
 					<div class="dropdown-item"><span><%= link_to 'My games', games_path %></span></div>
           <div class="dropdown-item"><span><%= link_to 'Profile', edit_user_registration_path %></span></div>
-          <div class="dropdown-item"><span><%= link_to 'About', destroy_user_session_path, method: :delete %></span></div>
+          <div class="dropdown-item"><span><%= link_to 'About', '/pages/about' %></span></div>
 
 					<div class="dropdown-divider"></div>
 					<div class="dropdown-item"><span><%= link_to 'Logout', destroy_user_session_path, method: :delete %></span></div>

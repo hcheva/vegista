@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   
   resources :users, only: [:show]
   resources :games
+  
+  Rails.application.routes.draw do
+  get "/pages/:page" => "pages#show"
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
