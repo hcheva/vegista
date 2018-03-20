@@ -4957,7 +4957,7 @@ a.text-muted:hover, a.text-muted:focus {
   text-decoration: line-through; }
 
 .text-u-l {
-  text-decoration: underline; }
+  text-decoration: none; }
 
 .text-ellipsis {
   display: block;

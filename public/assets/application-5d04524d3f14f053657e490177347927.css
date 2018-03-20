@@ -276,7 +276,7 @@ th {
   /* line 19, /home/cabox/.rvm/gems/ruby-2.1.2/gems/bootstrap-sass-3.3.5/assets/stylesheets/bootstrap/_print.scss */
   a,
   a:visited {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   /* line 23, /home/cabox/.rvm/gems/ruby-2.1.2/gems/bootstrap-sass-3.3.5/assets/stylesheets/bootstrap/_print.scss */
@@ -1743,8 +1743,7 @@ a {
 }
 /* line 53, /home/cabox/.rvm/gems/ruby-2.1.2/gems/bootstrap-sass-3.3.5/assets/stylesheets/bootstrap/_scaffolding.scss */
 a:hover, a:focus {
-  color: #23527c;
-  text-decoration: underline;
+  text-decoration: none;
 }
 /* line 58, /home/cabox/.rvm/gems/ruby-2.1.2/gems/bootstrap-sass-3.3.5/assets/stylesheets/bootstrap/_scaffolding.scss */
 a:focus {
@@ -4753,8 +4752,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 /* line 116, /home/cabox/.rvm/gems/ruby-2.1.2/gems/bootstrap-sass-3.3.5/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-link:hover, .btn-link:focus {
-  color: #23527c;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 /* line 124, /home/cabox/.rvm/gems/ruby-2.1.2/gems/bootstrap-sass-3.3.5/assets/stylesheets/bootstrap/_buttons.scss */

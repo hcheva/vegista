@@ -3,3 +3,37 @@
 @import "toastr";
 
 
+body {
+    font-family: avenir !important;
+}
+
+a {
+    text-decoration: none !important;
+  }
+
+a:visited {
+    text-decoration: none !important;
+  }
+
+a:hover {
+    text-decoration: none !important;
+  }
+
+.form-control-lg, .input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.bt {
+    padding: none !important;
+}
+
+.navbar-brand {
+    padding-top: .0rem !important;
+}
+
+.navbar-brand img, .navbar-brand svg {
+    top: 0.5rem !important;
+}
+
+
+
+
+
+
+
