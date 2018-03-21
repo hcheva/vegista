@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
   def home
     @games = Game.all
-    @game_days = Game.all.group_by { |g| g.created_at.strftime("%B, %d") }
+    @game_days = Game.order("created_at DESC").group_by { |g| g.created_at.strftime("%B, %d") }
+    
   end
   
   
