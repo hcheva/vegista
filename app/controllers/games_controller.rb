@@ -4,6 +4,7 @@ before_action :set_game, only: [:show, :edit, :update]
 before_action :authenticate_user!, except: [:show]
 before_action :require_same_user, only: [:edit, :update]
 
+ 
 def index
     @game = current_user.games
     @games = Game.all.order("created_at DESC")
