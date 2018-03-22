@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   
   resources :users, only: [:show]
-  resources :games, param: :slug
+  resources :games
   
   Rails.application.routes.draw do
   get "/pages/:page" => "pages#show"

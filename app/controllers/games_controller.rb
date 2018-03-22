@@ -57,7 +57,7 @@ end
 private
   
 def set_game
-  @game= Game.find_by(slug: params[:slug])
+  @game = Game.find(params[:id])
 end
   
 def game_params
