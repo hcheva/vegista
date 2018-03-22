@@ -1,4 +1,5 @@
 class Game < ActiveRecord::Base
+
   belongs_to :user
   has_many :photos
   
@@ -8,5 +9,8 @@ class Game < ActiveRecord::Base
   validates :game_genre, presence: true
   validates :game_platform, presence: true
   
+  extend FriendlyId
+  friendly_id :game_name, use: [:slugged, :history]
+  
+  
 end
-

@@ -60,6 +60,8 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     hike (1.2.3)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -168,6 +170,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise
+  friendly_id (~> 5.1.0)
   jbuilder (~> 2.0)
   jquery-rails
   paperclip

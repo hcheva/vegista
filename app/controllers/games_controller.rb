@@ -32,6 +32,7 @@ end
 def show
   @photos = @game.photos
 end
+
   
 def edit
   @photos = @game.photos
@@ -56,7 +57,7 @@ end
 private
   
 def set_game
-  @game = Game.find(params[:id])
+  @game= Game.find_by(slug: params[:slug])
 end
   
 def game_params
