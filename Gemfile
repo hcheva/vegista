@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -35,6 +35,8 @@ gem 'toastr-rails'
 
 #paperclip-cloudinary
 gem 'paperclip-cloudinary'
+
+gem 'activeadmin'
 
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
