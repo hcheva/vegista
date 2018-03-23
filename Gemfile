@@ -36,6 +36,9 @@ gem 'toastr-rails'
 #paperclip-cloudinary
 gem 'paperclip-cloudinary'
 
+#willpaginate
+gem 'will_paginate'
+
 
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   def home
     @games = Game.all
-    @game_days = Game.order("created_at DESC").group_by { |g| g.created_at.strftime("%B, %d") }
-    
+    @game_paginator = Game.paginate(:page => params[:page], :per_page => 30).order("created_at DESC")
+    @game_days = @game_paginator.group_by { |g| g.created_at.strftime("%B, %d") }
   end
   
   

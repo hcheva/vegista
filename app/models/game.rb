@@ -9,5 +9,6 @@ class Game < ActiveRecord::Base
   validates :game_genre, presence: true
   validates :game_platform, presence: true
   
-  
 end
+
+
