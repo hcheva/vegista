@@ -1,0 +1,14 @@
+<a href="<%= game.game_external_link %>" target="_blank" class="col-md-4 m-t-md">
+    <div class="box b-a m-a" style="box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.02);">
+      <div class="item b-b">
+				<div><%= image_tag game.photos[0].image.url(:thumb), class:"img-responsive" if game.photos.length > 0 %></div>
+      </div>
+      <div class="p-a text-left white">
+        <h6 class="text-md text-black block p-b-sm"><strong><%= game.game_name %></strong></h6>
+        <span class="text-muted p-t-md"><%= game.game_description %></span>
+        <div class="m-t-md">
+				<span><%= image_tag avatar_url(game.user), class:"w-24 circle b-a" %></span>
+        </div>
+      </div>
+    </div>
+  </a>
