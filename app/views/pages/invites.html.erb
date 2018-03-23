@@ -1,0 +1,165 @@
+<!-- content -->
+  <div id="content" class="app-content" role="main">
+    <div class="app-body white">
+
+    <div class="app" id="app">
+
+<!-- ############ LAYOUT START-->
+
+
+
+<!-- ############ PAGE START-->
+
+<div class="row-col white">
+
+	<div class="col-sm-3 aside aside-sm"></div>
+	<div class="col-sm-7 text-left">
+		<div class="p-x-md p-b-lg">
+			<h1 class="m-y-md text-black"><strong>Discover new indie games, every day.</strong></h1>
+            <h4 class="text-muted m-y-md">Get our exclusive discoveries in your inbox!</h4>
+
+<!-- Begin MailChimp Signup Form -->
+
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+
+
+            <form action="https://submitgame.us12.list-manage.com/subscribe/post?u=eaf8bb9ac5695175ea26f60a6&amp;id=9dfd4eacc7" method="post" id="mc-embedded-subscribe-form" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="m-b-lg __web-inspector-hide-shortcut__">
+              <div class="input-group input-group-lg">
+              <input type="email" id="mce-EMAIL" value="" name="EMAIL" class="form-control" placeholder="Your email" style="background-color: #fafafa" required>
+                <span class="input-group-btn">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn b-a no-shadow deep-purple text-white">Subscribe</input></span>
+              </div>
+            </form>
+<!--End mc_embed_signup-->
+
+
+		</div>
+	</div>
+	<div class="col-sm-3 text-center">
+  </div>
+</div>
+			
+			
+
+<div class="p-t-sm b-b b-t" id="features">
+  <div class="p-y-lg">
+
+
+  <div class="row m-b-lg m-x-lg">
+
+
+  <div class="col-sm-2 text-left"></div>
+  <div class="col-sm-8 text-left">
+
+  <div class="padding-none">
+  
+			<div>
+	
+ <% @game_days.each do |day, games| %>
+		
+				<div class="text-lg text-center m-y-md"><strong><%= day %></strong> </div>
+		
+		
+		<% for game in games %>
+
+		<a href="<%= game.game_external_link %>" target="_blank" class="col-md-4 m-t-md">
+    <div class="box b-a m-a" style="box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.02);">
+      <div class="item b-b">
+				<div><%= image_tag game.photos[0].image.url(:thumb), class:"img-responsive" if game.photos.length > 0 %></div>
+      </div>
+      <div class="p-a text-left white">
+        <h6 class="text-md text-black block p-b-sm"><strong><%= game.game_name %></strong></h6>
+        <span class="text-muted p-t-md"><%= game.game_description %></span>
+        <div class="m-t-md">
+				<span><%= image_tag avatar_url(game.user), class:"w-24 circle b-a" %></span>
+        </div>
+      </div>
+    </div>
+  </a>
+		<% end %>
+			<div class="p-y-sm clearfix"></div>
+<% end %>
+
+ 
+  </div>
+
+
+
+    </div>
+
+
+  <!-- Subscribe Modal -->
+
+
+
+    <div id="m" class="modal white-overlay in p-y-lg" data-backdrop="true" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h2 class="modal-title text-center"><strong>Get more tactics in your inbox!</strong> </h2>
+    <h6 class="modal-title text-center">Receive our exlusive interviews</h6>
+    </div>
+
+    <div class="modal-body text-center p-lg">
+
+
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+
+    <!--  End Subscribe Modal -->
+
+
+    </div>
+
+<!-- ############ PAGE END-->
+
+    </div>
+  </div>
+
+
+
+
+<!-- ############ PAGE END-->
+
+    </div>
+  </div>
+  <!-- / -->
+
+<!--<div class="footer text-info-hover">
+    <div class="container">
+      <div class="m-y-lg">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 m-b-lg">
+          <div class="text-md p-y-sm text-center text-black">
+            Some questions ? Consult <a href="about.html" class="text-info">about</a> section
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="m-y-sm">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 m-b-sm">
+          <div class="p-y-sm text-center text-sm text-u-c m-b text-muted">
+            Freetactic 2018 - All rights reserved
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>-->
+
+<!-- ############ LAYOUT END-->
+  </div>
