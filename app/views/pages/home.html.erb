@@ -36,7 +36,8 @@
               </div>
             </form>
 <!--End mc_embed_signup-->
-
+		
+		<p class="text-muted text-md m-y-md">Join 10 000+ game enthusiasts </p>
 
 		</div>
 	</div>
@@ -47,7 +48,7 @@
 			
 
 <div class="p-t-sm b-b b-t" id="features">
-  <div class="p-y-lg">
+  <div class="p-b-lg">
 
 
   <div class="row m-b-lg m-x-lg">
@@ -59,31 +60,43 @@
   <div class="padding-none">
   
 			<div>
-	
- <% @game_days.each do |day, games| %>
-		
-				<div class="text-lg text-center m-y-md"><strong><%= day %></strong> </div>
-		
-		
-		<% for game in games %>
-
-		<a href="<%= game.game_external_link %>" target="_blank" class="col-md-4 m-t-md">
-    <div class="box b-a m-a" style="box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.02);">
-      <div class="item b-b">
-				<div><%= image_tag game.photos[0].image.url(:thumb), class:"img-responsive" if game.photos.length > 0 %></div>
-      </div>
-      <div class="p-a text-left white">
-        <h6 class="text-md text-black block p-b-sm"><strong><%= game.game_name %></strong></h6>
-        <span class="text-muted p-t-md"><%= game.game_description %></span>
-        <div class="m-t-md">
-				<span><%= image_tag avatar_url(game.user), class:"w-24 circle b-a" %></span>
-        </div>
-      </div>
-    </div>
-  </a>
-		<% end %>
+				
+			
+			
+			 <% @game_days.each do |day, games| %>
+				
+			
+			<div class="text-lg text-center m-y-md" style="widht:1000px;"><strong><%= day %></strong> </div>
 			<div class="p-y-sm clearfix"></div>
-<% end %>
+
+		  
+		 <div class="container">
+			
+			
+			<% for game in games %>
+			
+        <a href="<%= game.game_external_link %>" target="_blank" class="col-md-4 col-xs-12" style="height: 380px;width: 320px;margin-bottom: 50px;">
+            <div class="panel box b-a m-a" style="box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.02);">
+							<%= image_tag game.photos[0].image.url(:thumb), class:"img-responsive b-b" if game.photos.length > 0 %>
+							<div class="panel-body">
+								<span><h6 class="text-md text-black block p-y-sm"><strong><%= game.game_name %></strong></h6></span>
+								<span class="text-muted p-t-md"><%= game.game_description %></span>
+							</div>
+							
+							<div style="padding: 10px 15px;position:absolute;bottom:0;"><%= image_tag avatar_url(game.user), class:"w-24 circle b-a" %></div>
+							
+							
+							</div>
+					</a>
+			
+			<% end %>
+			 
+			 	<div class="p-y-sm clearfix"></div>
+			
+	<% end %>
+			
+			
+    </div>
 				
 				<div class="m-y-md text-center text-lg">
 					<%= will_paginate @game_paginator %>
@@ -91,12 +104,10 @@
 										
   </div>
 		
-				
 
     </div>
 		
-		
-
+	
 
   <!-- Subscribe Modal -->
 
