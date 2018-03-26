@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
   
 before_action :set_game, only: [:show, :edit, :update]
-before_action :authenticate_user!, except: [:show]
+before_action :authenticate_user!, except: [:show, :index]
 before_action :require_same_user, only: [:edit, :update]
 
   
