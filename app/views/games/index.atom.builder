@@ -4,7 +4,7 @@ atom_feed do |feed|
   
     @games.each do |game|
       feed.entry game do |entry|
-        entry.link href:cl_image_tag(game.photos[0].image.url(:thumb)), rel:"enclosure", type:"image/jpeg"
+        entry.link cl_image_tag(game.photos[0].image.url(:thumb)), rel:"enclosure", type:"image/jpeg"
         entry.title game.game_name
         entry.description game.game_description
         entry.external_link game.game_external_link
