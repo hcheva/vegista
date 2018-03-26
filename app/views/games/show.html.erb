@@ -6,7 +6,7 @@
       <div class="row">
           
             <div class="col-md-6 p-a grey-100">              
-                <%= image_tag @photos[0].image.url(:large), class:"img-responsive" if @photos.length >0 %>
+                <%= image_tag @photos[0].image.url(:thumb), class:"img-responsive" if @photos.length >0 %>
 
                  <a href="<%= @game.game_external_link %>" target="_blank" class="text-center m-t-md text-muted" style="display:block">
                    <strong>GET IT</strong>
