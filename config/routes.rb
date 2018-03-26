@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :games
   
+  get '/feed' => 'games#feed'
+  
   get "/pages/:page" => "pages#show"
   
   

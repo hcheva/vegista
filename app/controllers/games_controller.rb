@@ -1,14 +1,21 @@
 class GamesController < ApplicationController
   
 before_action :set_game, only: [:show, :edit, :update]
-before_action :authenticate_user!, except: [:show, :index]
+before_action :authenticate_user!, except: [:show, :feed]
 before_action :require_same_user, only: [:edit, :update]
 
   
   
 def index
-  @games = Game.order("created_at desc")
+  @games = current_user.games
 end
+  
+def feed
+  # the news items
+  @games = Game.order("updated_at desc")
+end
+
+
   
 def new
   @game = current_user.games.build
