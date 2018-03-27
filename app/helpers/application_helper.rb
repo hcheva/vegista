@@ -8,6 +8,11 @@ module ApplicationHelper
      end
     end
   
+  #add referal to game external link
+  def self.ref_link(url)
+    "#{url}?ref=submitgame"
+  end
+  
 end
 
 
